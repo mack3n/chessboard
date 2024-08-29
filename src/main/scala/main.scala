@@ -1,0 +1,16 @@
+
+@main def main: Unit =
+  val cb = ChessBoard(9)
+  val king = King(Colour.White, Square('d',3))
+  val queen = Queen(Colour.White, Square('a', 1))
+  println(cb.addPiece(queen)
+      .addPiece(Rook(Colour.Black, Square('h', 8)))
+      .addPiece(Rook(Colour.Black, Square('b', 3)))
+      .addPiece(king))
+  println(king.legalMoves(cb))
+  println(queen.legalMoves(cb))
+//  val king1 = King(Colour.White, Square('e', 4))
+//  val king2 = King(Colour.White, Square('h', 8))
+//  val cb = ChessBoard()
+//  println(king1.legalMoves(cb))
+//  println(king2.legalMoves(cb))
